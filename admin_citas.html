@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_admin.css">
+    <link rel="icon" href="assets/img/af0b5c1a02edd66e8cf9aa0a86a5b760.gif" type="image/x-icon">
+    <title>Citas - Veterinaria San Marcos</title>
+</head>
+
+<body>
+
+    <div class="admin-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <img src="assets/img/af0b5c1a02edd66e8cf9aa0a86a5b760.gif" alt="Logo Veterinaria San Marcos">
+                <h2>San Marcos</h2>
+                <p>Administración</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="admin_dashboard.html">Dashboard</a>
+                <a href="admin_citas.html" class="active">Citas</a>
+                <a href="admin_usuarios.html">Usuarios</a>
+                <a href="admin_productos.html">Productos</a>
+                <a href="admin_mensajes.html">Mensajes</a>
+            </nav>
+
+            <button id="cerrarSesion" class="btn-cerrar-sesion" type="button">
+                Cerrar sesión
+            </button>
+
+        </aside>
+
+        <main class="admin-main">
+
+            <div class="admin-header">
+                <div>
+                    <h1>Gestión de Citas</h1>
+                    <p>Revisa y administra las citas solicitadas por los clientes.</p>
+                </div>
+
+                <div class="admin-usuario">
+                    Administrador
+                </div>
+            </div>
+
+            <section class="admin-resumen">
+
+                <div class="resumen-card">
+                    <h3>Total</h3>
+                    <p class="resumen-numero" id="totalCitas">0</p>
+                    <span>Citas registradas</span>
+                </div>
+
+                <div class="resumen-card">
+                    <h3>Pendientes</h3>
+                    <p class="resumen-numero" id="totalPendientes">0</p>
+                    <span>Por confirmar</span>
+                </div>
+
+                <div class="resumen-card">
+                    <h3>Confirmadas</h3>
+                    <p class="resumen-numero" id="totalConfirmadas">0</p>
+                    <span>Citas confirmadas</span>
+                </div>
+
+                <div class="resumen-card">
+                    <h3>Rechazadas</h3>
+                    <p class="resumen-numero" id="totalRechazadas">0</p>
+                    <span>Citas rechazadas</span>
+                </div>
+
+            </section>
+
+            <section class="admin-seccion">
+
+                <div class="seccion-header">
+                    <h2>Todas las citas</h2>
+                </div>
+
+                <div class="tabla-contenedor">
+
+                    <table class="tabla-admin">
+
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                                <th>Mascota</th>
+                                <th>Tutor</th>
+                                <th>Servicio</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tablaCitas"></tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script/admin_citas.js"></script>
+
+</body>
+
+</html>

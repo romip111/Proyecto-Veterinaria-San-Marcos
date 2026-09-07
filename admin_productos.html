@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_admin.css">
+    <link rel="icon" href="assets/img/af0b5c1a02edd66e8cf9aa0a86a5b760.gif" type="image/x-icon">
+    <title>
+        Productos y Servicios - Veterinaria San Marcos
+    </title>
+</head>
+
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img src="assets/img/af0b5c1a02edd66e8cf9aa0a86a5b760.gif" alt="Logo Veterinaria San Marcos">
+                <h2>
+                    San Marcos
+                </h2>
+                <p>
+                    Administración
+                </p>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="admin_dashboard.html">
+                    Dashboard
+                </a>
+                <a href="admin_citas.html">
+                    Citas
+                </a>
+                <a href="admin_usuarios.html">
+                    Usuarios
+                </a>
+                <a href="admin_productos.html" class="active">
+                    Productos
+                </a>
+                <a href="admin_mensajes.html">
+                    Mensajes</a>
+            </nav>
+            <button id="cerrarSesion" class="btn-cerrar-sesion" type="button">
+                Cerrar sesión
+            </button>
+        </aside>
+        <main class="admin-main">
+            <div class="admin-header">
+                <div>
+                    <h1>
+                        Productos y Servicios
+                    </h1>
+                    <p>
+                        Administra los productos y servicios disponibles
+                        en Veterinaria San Marcos.
+                    </p>
+                </div>
+                <div class="admin-usuario">
+                    Administrador
+                </div>
+            </div>
+            <section class="admin-resumen">
+                <div class="resumen-card">
+                    <h3>
+                        Total
+                    </h3>
+                    <p class="resumen-numero" id="totalItems">
+                        0
+                    </p>
+                    <span>
+                        Productos y servicios
+                    </span>
+                </div>
+                <div class="resumen-card">
+                    <h3>
+                        Productos
+                    </h3>
+                    <p class="resumen-numero" id="totalProductos">
+                        0
+                    </p>
+                    <span>
+                        Productos registrados
+                    </span>
+                </div>
+                <div class="resumen-card">
+                    <h3>
+                        Servicios
+                    </h3>
+                    <p class="resumen-numero" id="totalServicios">
+                        0
+                    </p>
+                    <span>
+                        Servicios registrados
+                    </span>
+                </div>
+                <div class="resumen-card">
+                    <h3>
+                        Stock crítico
+                    </h3>
+                    <p class="resumen-numero" id="totalCriticos">
+                        0
+                    </p>
+                    <span>
+                        Productos con alerta
+                    </span>
+                </div>
+            </section>
+            <section class="admin-seccion">
+                <div class="seccion-header">
+                    <h2 id="tituloFormulario">
+                        Agregar producto o servicio
+                    </h2>
+                </div>
+                <form id="formProducto" class="form-admin-producto">
+                    <div class="campo-admin">
+                        <label for="codigo">
+                            Código *
+                        </label>
+                        <input type="text" id="codigo" minlength="3" placeholder="Ej: PROD001" required>
+                    </div>
+                    <div class="campo-admin">
+                        <label for="tipo">
+                            Tipo *
+                        </label>
+                        <select id="tipo" required>
+                            <option value="">
+                                Selecciona
+                            </option>
+                            <option value="producto">
+                                Producto
+                            </option>
+                            <option value="servicio">
+                                Servicio
+                            </option>
+                        </select>
+                    </div>
+                    <div class="campo-admin">
+                        <label for="nombre">
+                            Nombre *
+                        </label>
+                        <input type="text" id="nombre" placeholder="Nombre del producto o servicio" required>
+                    </div>
+                    <div class="campo-admin">
+                        <label for="categoria">
+                            Categoría *
+                        </label>
+                        <input type="text" id="categoria" placeholder="Ej: Alimentos, Higiene, Consulta..." required>
+                    </div>
+                    <div class="campo-admin">
+                        <label for="imagen">
+                            Imagen
+                        </label>
+                        <input type="text" id="imagen" placeholder="Ej: assets/img/pelota-perro.jpg">
+                        <small>
+                            Ingresa la ruta de una imagen guardada en assets/img/
+                        </small>
+                    </div>
+                    <div class="campo-admin">
+                        <label for="precio">
+                            Precio CLP *
+                        </label>
+                        <input type="number" id="precio" min="0" placeholder="Ej: 15990" required>
+                    </div>
+                    <div class="campo-admin" id="campoStockActual">
+                        <label for="stockActual">
+                            Stock actual *
+                        </label>
+                        <input type="number" id="stockActual" min="0" value="0">
+                    </div>
+                    <div class="campo-admin" id="campoStockCritico">
+                        <label for="stockCritico">
+                            Stock crítico *
+                        </label>
+                        <input type="number" id="stockCritico" min="0" value="0">
+                    </div>
+                    <div class="campo-admin campo-descripcion">
+                        <label for="descripcion">
+                            Descripción
+                        </label>
+                        <textarea id="descripcion" rows="4"
+                            placeholder="Descripción del producto o servicio..."></textarea>
+                    </div>
+                    <div class="acciones-form-producto">
+                        <button type="submit" class="btn-guardar-producto" id="btnGuardar">
+                            Guardar
+                        </button>
+                        <button type="button" class="btn-cancelar-edicion" id="btnCancelar">
+                            Cancelar edición
+                        </button>
+                    </div>
+                </form>
+            </section>
+            <section class="alerta-stock" id="alertaStock">
+                <strong>
+                    ⚠ Atención:
+                </strong>
+                Hay productos con stock crítico.
+            </section>
+            <section class="admin-seccion">
+                <div class="seccion-header">
+                    <h2>
+                        Listado
+                    </h2>
+                </div>
+                <div class="tabla-contenedor">
+                    <table class="tabla-admin">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Código
+                                </th>
+                                <th>
+                                    Tipo
+                                </th>
+                                <th>
+                                    Nombre
+                                </th>
+                                <th>
+                                    Categoría
+                                </th>
+                                <th>
+                                    Precio
+                                </th>
+                                <th>
+                                    Stock actual
+                                </th>
+                                <th>
+                                    Stock crítico
+                                </th>
+                                <th>
+                                    Estado
+                                </th>
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaProductos">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script/productos_iniciales.js"></script>
+    <script src="script/admin_productos.js"></script>
+</body>
+
+</html>

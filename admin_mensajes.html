@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_admin.css">
+    <link
+        rel="icon"
+        href="assets/img/af0b5c1a02edd66e8cf9aa0a86a5b760.gif"
+        type="image/x-icon"
+    >
+    <title>Mensajes | Veterinaria San Marcos</title>
+</head>
+<body>
+
+    <div class="admin-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <img
+                    src="assets/img/af0b5c1a02edd66e8cf9aa0a86a5b760.gif"
+                    alt="Logo Veterinaria San Marcos"
+                >
+
+                <h2>
+                    San Marcos
+                </h2>
+
+                <p>
+                    Administración
+                </p>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="admin_dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="admin_citas.html">
+                    Citas
+                </a>
+
+                <a href="admin_usuarios.html">
+                    Usuarios
+                </a>
+
+                <a href="admin_productos.html">
+                    Productos
+                </a>
+
+                <a
+                    href="admin_mensajes.html"
+                    class="active"
+                >
+                    Mensajes
+                </a>
+
+            </nav>
+
+            <button
+                id="cerrarSesion"
+                class="btn-cerrar-sesion"
+                type="button"
+            >
+                Cerrar sesión
+            </button>
+
+        </aside>
+
+        <main class="admin-main">
+
+            <header class="admin-header">
+
+                <div>
+                    <h1>
+                        Mensajes de Contacto
+                    </h1>
+
+                    <p>
+                        Revisa los mensajes enviados desde el formulario de contacto.
+                    </p>
+                </div>
+
+            </header>
+
+            <section class="admin-resumen">
+
+                <div class="resumen-card">
+                    <h3>
+                        Total mensajes
+                    </h3>
+
+                    <span id="totalMensajes">
+                        0
+                    </span>
+                </div>
+
+                <div class="resumen-card">
+                    <h3>
+                        Nuevos
+                    </h3>
+
+                    <span id="totalNuevos">
+                        0
+                    </span>
+                </div>
+
+                <div class="resumen-card">
+                    <h3>
+                        Leídos
+                    </h3>
+
+                    <span id="totalLeidos">
+                        0
+                    </span>
+                </div>
+
+                <div class="resumen-card">
+                    <h3>
+                        Respondidos
+                    </h3>
+
+                    <span id="totalRespondidos">
+                        0
+                    </span>
+                </div>
+
+            </section>
+
+            <section class="admin-tabla-section">
+
+                <div class="tabla-header">
+
+                    <div>
+                        <h2>
+                            Mensajes recibidos
+                        </h2>
+                    </div>
+
+                    <div>
+                        <input
+                            type="text"
+                            id="buscarMensaje"
+                            placeholder="Buscar mensaje..."
+                        >
+                    </div>
+
+                </div>
+
+                <div class="tabla-contenedor">
+
+                    <table class="admin-table">
+
+                        <thead>
+                            <tr>
+                                <th>
+                                    Nombre
+                                </th>
+
+                                <th>
+                                    Correo
+                                </th>
+
+                                <th>
+                                    Teléfono
+                                </th>
+
+                                <th>
+                                    Mensaje
+                                </th>
+
+                                <th>
+                                    Fecha
+                                </th>
+
+                                <th>
+                                    Estado
+                                </th>
+
+                                <th>
+                                    Acciones
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tablaMensajes">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script/admin_mensajes.js"></script>
+
+</body>
+</html>

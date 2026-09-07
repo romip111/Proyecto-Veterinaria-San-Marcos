@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/img/af0b5c1a02edd66e8cf9aa0a86a5b760.gif" type="image/x-icon">
+    <title>Dashboard - Veterinaria San Marcos</title>
+    <link rel="stylesheet" href="css/style_admin.css">
+
+</head>
+
+<body>
+
+    <div class="admin-layout">
+
+        <aside class="sidebar">
+
+            <div class="sidebar-logo">
+                <img src="assets/img/af0b5c1a02edd66e8cf9aa0a86a5b760.gif" alt="Logo Veterinaria San Marcos">
+                <h2>San Marcos</h2>
+                <p>Administración</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="admin_dashboard.html" class="active">Dashboard</a>
+                <a href="admin_citas.html">Citas</a>
+                <a href="admin_usuarios.html">Usuarios</a>
+                <a href="admin_productos.html">Productos</a>
+                <a href="admin_mensajes.html">Mensajes</a>
+            </nav>
+
+            <button id="cerrarSesion" class="btn-cerrar-sesion" type="button">
+                Cerrar sesión
+            </button>
+
+        </aside>
+
+        <main class="admin-main">
+
+            <div class="admin-header">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Resumen general de Veterinaria San Marcos.</p>
+                </div>
+            </div>
+
+            <section class="dashboard-resumen">
+
+                <div class="dashboard-card">
+                    <span>Total de citas</span>
+                    <strong id="totalCitas">0</strong>
+                </div>
+
+                <div class="dashboard-card">
+                    <span>Total de usuarios</span>
+                    <strong id="totalUsuarios">0</strong>
+                </div>
+
+                <div class="dashboard-card">
+                    <span>Productos y servicios</span>
+                    <strong id="totalProductos">0</strong>
+                </div>
+
+            </section>
+
+            <section class="dashboard-contenido">
+
+                <div class="dashboard-panel">
+
+                    <h2>Últimas citas</h2>
+
+                    <div class="tabla-contenedor">
+                        <table class="dashboard-tabla">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Cliente</th>
+                                    <th>Mascota</th>
+                                    <th>Fecha</th>
+                                    <th>Hora</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaCitas"></tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <div class="dashboard-panel">
+
+                    <h2>Accesos rápidos</h2>
+
+                    <div class="accesos-rapidos">
+                        <a href="admin_citas.html" class="acceso-rapido">
+                            📅 Administrar citas
+                        </a>
+
+                        <a href="admin_usuarios.html" class="acceso-rapido">
+                            👥 Administrar usuarios
+                        </a>
+
+                        <a href="admin_productos.html" class="acceso-rapido">
+                            📦 Administrar productos
+                        </a>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script/admin.js"></script>
+
+</body>
+
+</html>
