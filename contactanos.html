@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/af0b5c1a02edd66e8cf9aa0a86a5b760.gif" type="image/x-icon">
+    <title>
+        Contactanos - Veterinaria San Marcos
+    </title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="assets/img/af0b5c1a02edd66e8cf9aa0a86a5b760.gif" alt="Logo Veterinaria San Marcos"
+                    class="logo-img">
+                <div class="logo">
+                    <a href="index.html">
+                        Veterinaria San Marcos
+                    </a>
+                </div>
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar..." autocomplete="off">
+
+                <button type="button" id="searchButton" aria-label="Buscar">
+                    🔍
+                </button>
+
+                <div id="searchSuggestions" class="search-suggestions"></div>
+            </div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                ☰
+            </label>
+            <nav class="navbar">
+                <ul class="listajiji">
+                    <li>
+                        <a href="index.html">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="solicitar_cita.html">
+                            Solicitar Cita
+                        </a>
+                    </li>
+                    <li id="menuMisCitas" style="display:none;">
+                        <a href="mis_citas.html">
+                            Mis Citas
+                        </a>
+                    </li>
+                    <li id="menuMiPerfil" style="display:none;">
+                        <a href="mi_perfil.html">
+                            Mi Perfil
+                        </a>
+                    </li>
+                    <li>
+                        <a href="contactanos.html" class="active">
+                            Contactanos
+                        </a>
+                    </li>
+                    <li>
+                        <a href="acerca_de.html">
+                            Acerca de Nosotros
+                        </a>
+                    </li>
+                    <li class="menu-sesion-movil">
+                        <a href="inicio_sesion.html" class="iniciar-sesion-movil">
+                            👤 Iniciar sesión
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="inicio_sesion.html" class="iniciar-sesion">
+                👤 Iniciar sesión
+            </a>
+            <button id="botonCarrito" class="carrito-icono" type="button" aria-label="Abrir carrito">
+                🛒
+                <span id="contadorCarrito">
+                    0
+                </span>
+            </button>
+        </div>
+    </header>
+    <div id="carritoPanel" class="carrito-panel">
+        <div class="carrito-header">
+            <h2>
+                🛒 Mi Carrito
+            </h2>
+            <button id="cerrarCarrito" class="cerrar-carrito" type="button">
+                ×
+            </button>
+        </div>
+        <div id="carritoContenido" class="carrito-contenido">
+        </div>
+        <div class="carrito-footer">
+            <div class="carrito-total">
+                <span>
+                    Total:
+                </span>
+                <strong id="carritoTotal">
+                    $0
+                </strong>
+            </div>
+            <button id="finalizarCompra" class="btn-finalizar" type="button">
+                Finalizar compra
+            </button>
+            <button id="vaciarCarrito" class="btn-vaciar" type="button">
+                Vaciar carrito
+            </button>
+        </div>
+    </div>
+    <div id="fondoCarrito" class="fondo-carrito">
+    </div>
+    <main>
+        <section class="contacto">
+            <h1>
+                Contáctanos
+            </h1>
+            <p>
+                Estamos aquí para ayudarte y cuidar de tu mascota.
+            </p>
+            <div class="contacto-contenido">
+                <div class="informacion-contacto">
+                    <h2>
+                        Información de contacto
+                    </h2>
+                    <p>
+                        📍 Viña del Mar, Chile
+                    </p>
+                    <p>
+                        📞 (+56) 9 3083 4722
+                    </p>
+                    <p>
+                        ✉️ veterinaria@sanmarcos.cl
+                    </p>
+                    <p>
+                        🕐 Lunes a viernes:
+                        09:00 - 18:00
+                    </p>
+                    <br>
+                    <img src="assets/img/kitten-gifs.gif" alt="Veterinaria San Marcos" class="imagen-contacto">
+                </div>
+                <div class="formulario-contacto">
+                    <h2>
+                        Envíanos un mensaje
+                    </h2>
+                    <form id="formContacto" novalidate>
+                        <label for="nombre">
+                            Nombre *
+                        </label>
+                        <input type="text" id="nombre" name="nombre" maxlength="80" autocomplete="name">
+                        <label for="correo">
+                            Correo electrónico *
+                        </label>
+                        <input type="email" id="correo" name="correo" maxlength="100" autocomplete="email">
+                        <label for="telefono">
+                            Teléfono
+                        </label>
+                        <input type="tel" id="telefono" name="telefono" maxlength="15" placeholder="+56 9 1234 5678"
+                            autocomplete="tel">
+                        <label for="asunto">
+                            Asunto *
+                        </label>
+                        <input type="text" id="asunto" name="asunto" maxlength="100">
+                        <label for="mensaje">
+                            Mensaje *
+                        </label>
+                        <textarea id="mensaje" name="mensaje" rows="5" maxlength="500"
+                            placeholder="Escribe tu mensaje aquí..."></textarea>
+                        <button type="submit">
+                            Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="ubicacion">
+            <h2>
+                Nuestra ubicación
+            </h2>
+            <div class="map-placeholder">
+                <a href="https://maps.app.goo.gl/M1L8xR1CCYgmtftR7" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/img/Captura de pantalla 2026-08-31 113519.png"
+                        alt="Ubicación Veterinaria San Marcos" width="600" height="400">
+                </a>
+            </div>
+        </section>
+        <section class="solicitar-cita">
+            <h2>
+                ¿Necesitas una cita?
+            </h2>
+            <p>
+                Agenda una atención para tu mascota con nuestro equipo.
+            </p>
+            <a href="solicitar_cita.html">
+                Solicitar cita
+            </a>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div>
+                <h3>
+                    Veterinaria San Marcos
+                </h3>
+                <p>
+                    Cuidando la salud y bienestar de tus mascotas.
+                </p>
+            </div>
+            <div>
+                <h3>
+                    Contacto
+                </h3>
+                <p>
+                    Viña del Mar, Chile
+                </p>
+                <p>
+                    Teléfono: (+56) 9 3083 4722
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Veterinaria San Marcos -
+                Todos los derechos reservados.
+            </p>
+        </div>
+    </footer>
+    <script src="script/carrito.js"></script>
+    <script src="script/buscador.js"></script>
+    <script src="script/sesion.js"></script>
+    <script src="script/contacto.js"></script>
+</body>
+
+</html>

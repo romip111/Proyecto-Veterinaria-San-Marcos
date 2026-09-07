@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/img/af0b5c1a02edd66e8cf9aa0a86a5b760.gif" type="image/x-icon">
+  <title>
+    Veterinaria San Marcos
+  </title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="assets/img/af0b5c1a02edd66e8cf9aa0a86a5b760.gif"
+          alt="Logo Veterinaria San Marcos"
+          class="logo-img">
+
+        <div class="logo">
+          <a href="index.html">
+            Veterinaria San Marcos
+          </a>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Buscar..."
+          autocomplete="off"
+        >
+
+        <button
+          type="button"
+          id="searchButton"
+          aria-label="Buscar"
+        >
+          🔍
+        </button>
+
+        <div
+          id="searchSuggestions"
+          class="search-suggestions"
+        ></div>
+      </div>
+
+      <input
+        type="checkbox"
+        id="menu-toggle"
+      >
+
+      <label
+        for="menu-toggle"
+        class="menu-icon"
+      >
+        ☰
+      </label>
+
+      <nav class="navbar">
+        <ul class="listajiji">
+          <li
+            id="menuMiPerfil"
+            style="display:none;"
+          >
+            <a href="mi_perfil.html">
+              Mi Perfil
+            </a>
+          </li>
+
+          <li>
+            <a
+              href="index.html"
+              class="active"
+            >
+              Inicio
+            </a>
+          </li>
+
+          <li>
+            <a href="solicitar_cita.html">
+              Solicitar Cita
+            </a>
+          </li>
+
+          <li
+            id="menuMisCitas"
+            style="display: none;"
+          >
+            <a href="mis_citas.html">
+              Mis Citas
+            </a>
+          </li>
+
+          <li>
+            <a href="contactanos.html">
+              Contactanos
+            </a>
+          </li>
+
+          <li>
+            <a href="acerca_de.html">
+              Acerca de Nosotros
+            </a>
+          </li>
+
+          <li class="menu-sesion-movil">
+            <a
+              href="inicio_sesion.html"
+              class="iniciar-sesion-movil"
+            >
+              👤 Iniciar sesión
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <a
+        href="inicio_sesion.html"
+        class="iniciar-sesion"
+      >
+        👤 Iniciar sesión
+      </a>
+
+      <button
+        id="botonCarrito"
+        class="carrito-icono"
+        type="button"
+        aria-label="Abrir carrito"
+      >
+        🛒
+
+        <span id="contadorCarrito">
+          0
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <div
+    id="carritoPanel"
+    class="carrito-panel"
+  >
+    <div class="carrito-header">
+      <h2>
+        🛒 Mi Carrito
+      </h2>
+
+      <button
+        id="cerrarCarrito"
+        class="cerrar-carrito"
+        type="button"
+      >
+        ×
+      </button>
+    </div>
+
+    <div
+      id="carritoContenido"
+      class="carrito-contenido"
+    >
+    </div>
+
+    <div class="carrito-footer">
+      <div class="carrito-total">
+        <span>
+          Total:
+        </span>
+
+        <strong id="carritoTotal">
+          $0
+        </strong>
+      </div>
+
+      <button
+        id="finalizarCompra"
+        class="btn-finalizar"
+        type="button"
+      >
+        Finalizar compra
+      </button>
+
+      <button
+        id="vaciarCarrito"
+        class="btn-vaciar"
+        type="button"
+      >
+        Vaciar carrito
+      </button>
+    </div>
+  </div>
+
+  <div
+    id="fondoCarrito"
+    class="fondo-carrito"
+  ></div>
+
+  <main>
+    <section class="banner">
+      <div class="banner-slide slide-1">
+        <div class="banner-content">
+          <p class="banner-subtitle">
+            Veterinaria San Marcos
+          </p>
+
+          <h1>
+            Cuidamos la salud de tu mascota
+          </h1>
+
+          <p>
+            Atención integral para perros, gatos, conejos en Viña del Mar.
+          </p>
+
+          <a
+            href="solicitar_cita.html"
+            class="btn"
+          >
+            Agendar Cita en Línea
+          </a>
+        </div>
+      </div>
+
+      <div class="banner-slide slide-2">
+        <div class="banner-content">
+          <p class="banner-subtitle">
+            Atención profesional
+          </p>
+
+          <h1>
+            La salud de tu mascota es nuestra prioridad
+          </h1>
+
+          <p>
+            Entregamos atención veterinaria responsable y cercana.
+          </p>
+
+          <a
+            href="solicitar_cita.html"
+            class="btn"
+          >
+            Solicitar Cita
+          </a>
+        </div>
+      </div>
+
+      <div class="banner-slide slide-3">
+        <div class="banner-content">
+          <p class="banner-subtitle">
+            Nuestros servicios
+          </p>
+
+          <h1>
+            Todo lo que tu mascota necesita
+          </h1>
+
+          <p>
+            Consulta general, vacunación, desparasitación y cirugía menor.
+          </p>
+
+          <a
+            href="#servicios"
+            class="btn"
+          >
+            Ver Servicios
+          </a>
+        </div>
+      </div>
+
+      <div class="banner-indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+      </div>
+    </section>
+
+    <section
+      id="tienda"
+      class="section"
+    >
+      <div class="section-title">
+        <p class="section-subtitle">
+          Nuestra Tienda
+        </p>
+
+        <h2>
+          Productos para tu Mascota
+        </h2>
+      </div>
+
+      <div class="productos-grid">
+      </div>
+    </section>
+
+    <section
+      id="servicios"
+      class="section"
+    >
+      <div class="section-title">
+        <p class="section-subtitle">
+          Lo que ofrecemos
+        </p>
+
+        <h2>
+          Nuestros Servicios
+        </h2>
+
+        <p>
+          Contamos con diferentes servicios para cuidar la salud
+          y bienestar de tus mascotas.
+        </p>
+      </div>
+
+      <div class="grid-container">
+        <article class="card">
+          <div class="card-image">
+            <img
+              src="assets/img/images.jpg"
+              alt="Consulta médica veterinaria"
+            >
+          </div>
+
+          <div class="card-content">
+            <h3>
+              Consulta General desde
+            </h3>
+
+            <h3>
+              $7.990
+            </h3>
+
+            <p>
+              Evaluación médica preventiva y diagnóstico oportuno
+              para tu mascota.
+            </p>
+
+            <a
+              href="solicitar_cita.html"
+              class="card-link"
+            >
+              Solicitar cita →
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <img
+              src="assets/img/WhatsApp-Image-2023-12-01-at-11.50.35-2.jpeg"
+              alt="Vacunación de mascotas"
+            >
+          </div>
+
+          <div class="card-content">
+            <h3>
+              Vacunación y Desparasitación
+            </h3>
+
+            <h3>
+              $10.990
+            </h3>
+
+            <p>
+              Mantén el esquema al día para proteger la salud
+              de tus animales domésticos.
+            </p>
+
+            <a
+              href="solicitar_cita.html"
+              class="card-link"
+            >
+              Solicitar cita →
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <img
+              src="assets/img/CIRUGIA.jpg"
+              alt="Cirugía menor"
+            >
+          </div>
+
+          <div class="card-content">
+            <h3>
+              Cirugía Menor desde
+            </h3>
+
+            <h3>
+              $50.990
+            </h3>
+
+            <p>
+              Procedimientos quirúrgicos seguros realizados por
+              profesionales altamente calificados.
+            </p>
+
+            <a
+              href="solicitar_cita.html"
+              class="card-link"
+            >
+              Solicitar cita →
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section
+      id="ubicacion"
+      class="section location-section"
+    >
+      <div class="section-title">
+        <p class="section-subtitle">
+          Dónde encontrarnos
+        </p>
+
+        <h2>
+          Ubicación
+        </h2>
+
+        <p>
+          Encuéntranos en Viña del Mar, Región de Valparaíso.
+        </p>
+      </div>
+
+      <div class="location-container">
+        <div class="location-info">
+          <h3>
+            Veterinaria San Marcos
+          </h3>
+
+          <p style="color: rgb(61, 104, 153);">
+            📍 Av. Libertad #1112, Viña del Mar, Región de Valparaíso.
+          </p>
+
+          <p style="color: rgb(61, 104, 153);">
+            📞 (+56) 9 3083 4722
+          </p>
+
+          <p style="color: rgb(61, 104, 153);">
+            📩 vet.sanmarcos@gmail.com
+          </p>
+
+          <p style="color: rgb(61, 104, 153);">
+            📷@Vet_sanmarcos_viña
+          </p>
+
+          <p style="color: rgb(61, 104, 153);">
+            Atención veterinaria para perros, gatos, conejos.
+          </p>
+        </div>
+
+        <div class="map-placeholder">
+          <a href="https://maps.app.goo.gl/M1L8xR1CCYgmtftR7">
+            <img
+              src="assets/img/Captura de pantalla 2026-08-31 113519.png"
+              alt="Ubicación de Veterinaria San Marcos"
+              width="600"
+              height="400"
+            >
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div>
+        <h3>
+          Veterinaria San Marcos
+        </h3>
+
+        <p>
+          Cuidando la salud y bienestar de tus mascotas.
+        </p>
+      </div>
+
+      <div>
+        <h3>
+          Contacto
+        </h3>
+
+        <p>
+          Viña del Mar, Chile
+        </p>
+
+        <p>
+          Teléfono: (+56) 9 3083 4722
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        &copy; 2026 Veterinaria San Marcos -
+        Todos los derechos reservados.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script/productos_iniciales.js"></script>
+  <script src="script/catalogo.js"></script>
+  <script src="script/carrito.js"></script>
+  <script src="script/carrusel.js"></script>
+  <script src="script/buscador.js"></script>
+  <script src="script/sesion.js"></script>
+</body>
+
+</html>

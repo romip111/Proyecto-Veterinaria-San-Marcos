@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/af0b5c1a02edd66e8cf9aa0a86a5b760.gif" type="image/x-icon">
+    <title>Veterinaria San Marcos</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+
+            <div class="logo-container">
+                <img src="assets/img/af0b5c1a02edd66e8cf9aa0a86a5b760.gif" alt="Logo Veterinaria San Marcos"
+                    class="logo-img">
+
+                <div class="logo">
+                    <a href="index.html">Veterinaria San Marcos</a>
+                </div>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar...">
+                <button type="button">🔍</button>
+            </div>
+
+            <input type="checkbox" id="menu-toggle">
+
+            <label for="menu-toggle" class="menu-icon">
+                ☰
+            </label>
+
+            <nav class="navbar">
+                <ul class="listajiji">
+                    <li>
+                        <a href="index.html">Inicio</a>
+                    </li>
+
+                    <li>
+                        <a href="solicitar_cita.html">Solicitar Cita</a>
+                    </li>
+
+                    <li>
+                        <a href="contactanos.html">Contactanos</a>
+                    </li>
+
+                    <li>
+                        <a href="acerca_de.html">Acerca de Nosotros</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <a href="inicio_sesion.html" class="iniciar-sesion">
+                👤 Iniciar sesión
+            </a>
+
+            <button id="botonCarrito" class="carrito-icono" type="button" aria-label="Abrir carrito">
+                🛒
+                <span id="contadorCarrito">0</span>
+            </button>
+
+        </div>
+    </header>
+
+    <div id="carritoPanel" class="carrito-panel">
+
+        <div class="carrito-header">
+            <h2>🛒 Mi Carrito</h2>
+
+            <button id="cerrarCarrito" class="cerrar-carrito" type="button">
+                ×
+            </button>
+        </div>
+
+        <div id="carritoContenido" class="carrito-contenido"></div>
+
+        <div class="carrito-footer">
+
+            <div class="carrito-total">
+                <span>Total:</span>
+                <strong id="carritoTotal">$0</strong>
+            </div>
+
+            <button id="finalizarCompra" class="btn-finalizar" type="button">
+                Finalizar compra
+            </button>
+
+            <button id="vaciarCarrito" class="btn-vaciar" type="button">
+                Vaciar carrito
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="fondoCarrito" class="fondo-carrito"></div>
+
+    <main class="main-login">
+
+        <section class="login-container">
+
+            <div class="login-card">
+
+                <div class="login-icono">
+                    🐾
+                </div>
+
+                <h1>Iniciar sesión</h1>
+
+                <p class="login-descripcion">
+                    Ingresa a tu cuenta para continuar
+                </p>
+
+                <form class="login-form" id="formLogin">
+
+                    <div class="login-campo">
+                        <label for="correo">Correo electrónico</label>
+
+                        <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+                    </div>
+
+                    <div class="login-campo">
+                        <label for="contrasena">Contraseña</label>
+
+                        <input type="password" id="contrasena" name="contrasena" placeholder="Ingresa tu contraseña"
+                            required>
+                    </div>
+
+                    <div class="login-opciones">
+
+                        <label class="recordarme">
+                            <input type="checkbox" name="recordarme">
+                            Recordarme
+                        </label>
+
+                        <a href="#" class="olvidaste-contrasena">
+                            ¿Olvidaste tu contraseña?
+                        </a>
+
+                    </div>
+
+                    <button type="submit" class="btn-login">
+                        Iniciar sesión
+                    </button>
+
+                </form>
+
+                <div class="login-registro">
+                    <p>
+                        ¿No tienes una cuenta?
+                        <a href="registro.html">Regístrate aquí</a>
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+                <h3>Veterinaria San Marcos</h3>
+                <p>Cuidando la salud y bienestar de tus mascotas.</p>
+            </div>
+
+            <div>
+                <h3>Contacto</h3>
+                <p>Viña del Mar, Chile</p>
+                <p>Teléfono: (+56) 9 3083 4722</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Veterinaria San Marcos -
+                Todos los derechos reservados.
+            </p>
+        </div>
+
+    </footer>
+
+    <script src="script/carrito.js"></script>
+    <script src="script/login.js"></script>
+
+</body>
+
+</html>

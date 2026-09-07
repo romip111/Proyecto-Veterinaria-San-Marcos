@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <link
+        rel="icon"
+        href="assets/img/af0b5c1a02edd66e8cf9aa0a86a5b760.gif"
+        type="image/x-icon">
+    <title>
+        Administrar Usuarios - Veterinaria San Marcos
+    </title>
+    <link
+        rel="stylesheet"
+        href="css/style_admin.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <img
+                    src="assets/img/af0b5c1a02edd66e8cf9aa0a86a5b760.gif"
+                    alt="Logo Veterinaria San Marcos">
+                <h2>
+                    San Marcos
+                </h2>
+                <p>
+                    Administración
+                </p>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="admin_dashboard.html">
+                    Dashboard
+                </a>
+                <a href="admin_citas.html">
+                    Citas
+                </a>
+                <a
+                    href="admin_usuarios.html"
+                    class="active">
+                    Usuarios
+                </a>
+                <a href="admin_productos.html">
+                    Productos
+                </a>
+                <a href="admin_mensajes.html">
+                    Mensajes</a>
+            </nav>
+            <button
+                id="cerrarSesion"
+                class="btn-cerrar-sesion"
+                type="button">
+                Cerrar sesión
+            </button>
+        </aside>
+        <main class="admin-main usuarios-main">
+            <div class="admin-header">
+                <div>
+                    <h1>
+                        Usuarios
+                    </h1>
+                    <p>
+                        Administra las cuentas registradas en el sistema.
+                    </p>
+                </div>
+            </div>
+            <section class="usuarios-resumen">
+                <div class="usuario-resumen-card">
+                    <span>
+                        Total de usuarios
+                    </span>
+                    <strong id="totalUsuarios">
+                        0
+                    </strong>
+                </div>
+                <div class="usuario-resumen-card">
+                    <span>
+                        Usuarios activos
+                    </span>
+                    <strong id="usuariosActivos">
+                        0
+                    </strong>
+                </div>
+                <div class="usuario-resumen-card">
+                    <span>
+                        Usuarios inactivos
+                    </span>
+                    <strong id="usuariosInactivos">
+                        0
+                    </strong>
+                </div>
+            </section>
+            <section class="usuarios-panel">
+                <div class="usuarios-panel-superior">
+                    <h2>
+                        Usuarios registrados
+                    </h2>
+                    <input
+                        type="search"
+                        id="buscarUsuario"
+                        class="usuarios-buscador"
+                        placeholder="Buscar por nombre, RUN o correo...">
+                </div>
+                <div class="usuarios-tabla-contenedor">
+                    <table class="usuarios-tabla">
+                        <thead>
+                            <tr>
+                                <th>RUN</th>
+                                <th>Nombre</th>
+                                <th>Correo</th>
+                                <th>Teléfono</th>
+                                <th>Ubicación</th>
+                                <th>Rol</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaUsuarios">
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div
+        id="modalUsuarioFondo"
+        class="modal-usuario-fondo">
+        <div class="modal-usuario">
+            <h2>
+                Editar usuario
+            </h2>
+            <form id="formEditarUsuario">
+                <div class="modal-usuario-grid">
+                    <div class="campo-usuario">
+                        <label for="editarRun">
+                            RUN
+                        </label>
+                        <input
+                            type="text"
+                            id="editarRun"
+                            readonly>
+                    </div>
+                    <div class="campo-usuario">
+                        <label for="editarNombre">
+                            Nombre
+                        </label>
+                        <input
+                            type="text"
+                            id="editarNombre"
+                            required>
+                    </div>
+                    <div class="campo-usuario">
+                        <label for="editarApellidos">
+                            Apellidos
+                        </label>
+                        <input
+                            type="text"
+                            id="editarApellidos"
+                            required>
+                    </div>
+                    <div class="campo-usuario">
+                        <label for="editarCorreo">
+                            Correo
+                        </label>
+                        <input
+                            type="email"
+                            id="editarCorreo"
+                            required>
+                    </div>
+                    <div class="campo-usuario">
+                        <label for="editarTelefono">
+                            Teléfono
+                        </label>
+                        <input
+                            type="tel"
+                            id="editarTelefono">
+                    </div>
+                    <div class="campo-usuario">
+                        <label for="editarRol">
+                            Rol
+                        </label>
+                        <select id="editarRol">
+                            <option value="cliente">
+                                Cliente
+                            </option>
+                            <option value="admin">
+                                Administrador
+                            </option>
+                        </select>
+                    </div>
+                    <div class="campo-usuario">
+                        <label for="editarRegion">
+                            Región
+                        </label>
+                        <input
+                            type="text"
+                            id="editarRegion">
+                    </div>
+                    <div class="campo-usuario">
+                        <label for="editarComuna">
+                            Comuna
+                        </label>
+                        <input
+                            type="text"
+                            id="editarComuna">
+                    </div>
+                    <div class="campo-usuario campo-usuario-completo">
+                        <label for="editarDireccion">
+                            Dirección
+                        </label>
+                        <input
+                            type="text"
+                            id="editarDireccion">
+                    </div>
+                </div>
+                <div class="modal-usuario-botones">
+                    <button
+                        type="button"
+                        id="cancelarEdicion"
+                        class="btn-cancelar-modal">
+                        Cancelar
+                    </button>
+                    <button
+                        type="submit"
+                        class="btn-guardar-modal">
+                        Guardar cambios
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script/admin_usuarios.js"></script>
+</body>
+</html>
